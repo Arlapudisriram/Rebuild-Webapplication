@@ -106,12 +106,20 @@ import Home from './Components/Home';
 
             
           </SignedIn> 
-            
+            <div style={{ padding: "2rem", fontFamily: "sans-serif" }}>
+                  <SignedOut>
+                    <h2>You are signed out</h2>
+                    <SignInButton />
+                  </SignedOut>
+
+                  <SignedIn>
+                    <h2>Welcome, Sriram 🎉</h2>
+                    <p>You are signed in — this is your actual app UI.</p>
+                    <UserButton />
+                  </SignedIn>
+    </div>
           
-          <SignedOut>
-                    
-                    
-          </SignedOut>
+          
 
           </div> 
           <div>
