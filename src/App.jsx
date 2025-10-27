@@ -95,7 +95,7 @@ import Home from './Components/Home';
           </Routes>
 
         <div className=' w-screen h-screen bg-violet-200'>
-         <SignedIn>
+         {/* <SignedIn>
 
            <div className="mt-12 w-[600px]  flex items-center gap-4">
               <Link className='hover:bg-blue-600 bg-blue-400 mt-6 text-white text-xl p-2 rounded-md' to="/gpt">Ask GPT</Link> 
@@ -105,7 +105,7 @@ import Home from './Components/Home';
             </div> 
 
             
-          </SignedIn> 
+          </SignedIn>  */}
             <div style={{ padding: "2rem", fontFamily: "sans-serif" }}>
                   <SignedOut>
                     <h2>You are signed out</h2>
@@ -115,6 +115,13 @@ import Home from './Components/Home';
                   <SignedIn>
                     <h2>Welcome, Sriram 🎉</h2>
                     <p>You are signed in — this is your actual app UI.</p>
+                    <div className="mt-12 w-[600px]  flex items-center gap-4">
+                      <Link className='hover:bg-blue-600 bg-blue-400 mt-6 text-white text-xl p-2 rounded-md' to="/gpt">Ask GPT</Link> 
+                      <Link className='hover:bg-blue-600 bg-blue-400 mt-6 text-white text-xl p-2 rounded-md' to="/about">Logmeal</Link> 
+                      <Link className=' hover:bg-blue-600 bg-blue-400 mt-6 text-white text-xl p-2 rounded-md' to="/streak">Streak</Link>
+                      <Link className=' hover:bg-blue-600 bg-blue-400 mt-6 text-white text-xl p-2 rounded-md' to="/leadership">Leadership</Link>  
+                    </div> 
+
                     <UserButton />
                   </SignedIn>
     </div>
