@@ -69,12 +69,12 @@ import Home from './Components/Home';
                   </nav>
                   <nav className='flex  items-center'>
                     <Link className='hover:text-blue-500 p-2 rounded-md' to="/"></Link>
-                    <Link className='  hover:text-blue-500  p-2 rounded-md' to="/signin">SignIn</Link> 
+                    {/* <Link className='  hover:text-blue-500  p-2 rounded-md' to="/signin">SignIn</Link>  */}
                     {/* <Link className='hover:text-blue-500 p-2 rounded-md' to="/">Home</Link> <Link className='hover:text-blue-500 p-2 rounded-md' to="/chatgpt">GPT</Link> <Link className='hover:text-blue-500  p-2 rounded-md' to="/about">Logmeal</Link> <Link className='hover:text-blue-500  p-2 rounded-md' to="/streak">Streak</Link>  <Link className='hover:text-blue-500  p-2 rounded-md' to="/leadership">Leadership</Link> <Link className='  hover:text-blue-500  p-2 rounded-md' to="/signin">SignIn</Link>     */}
                   </nav>
              </div>
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            {/* <Route path="/" element={<HomePage />} /> */}
             <Route path="/gpt" element={<ContentPage />} />
              <Route path="/about" element={<AboutPage />} />
              <Route path="/streak" element={<StreakPage />} />
@@ -106,27 +106,44 @@ import Home from './Components/Home';
 
             
           </SignedIn>  */}
-            <div style={{ padding: "2rem", fontFamily: "sans-serif" }}>
+           
                   <SignedOut>
-                    <h2>You are signed out</h2>
-                    <SignInButton />
+                          <div className="">
+                                    <div className="flex max-w-7xl justify-between items-center">
+                                      <h2 className='text-2xl text-center mt-12 font-bold'>You are signed out!!</h2>
+                                        <div className="bg-black px-4 py-2 mt-12 rounded-lg text-white">
+                                            <SignInButton />
+                                        </div>
+                                    </div>
+                          </div>
+                      
+                    <Intro/>
                   </SignedOut>
 
                   <SignedIn>
-                    <h2>Welcome, Sriram 🎉</h2>
-                    <p>You are signed in — this is your actual app UI.</p>
-                    <div className="mt-12 w-[600px]  flex items-center gap-4">
-                      <Link className='hover:bg-blue-600 bg-blue-400 mt-6 text-white text-xl p-2 rounded-md' to="/gpt">Ask GPT</Link> 
-                      <Link className='hover:bg-blue-600 bg-blue-400 mt-6 text-white text-xl p-2 rounded-md' to="/about">Logmeal</Link> 
-                      <Link className=' hover:bg-blue-600 bg-blue-400 mt-6 text-white text-xl p-2 rounded-md' to="/streak">Streak</Link>
-                      <Link className=' hover:bg-blue-600 bg-blue-400 mt-6 text-white text-xl p-2 rounded-md' to="/leadership">Leadership</Link>  
-                    </div> 
+                      <div className="w-screen">
+                                    
+                            <div className="flex justify-between  items-center  max-w-7xl mx-auto">
+                                       <div className=" w-[600px]  flex items-center gap-3">
+                                          <Link className='hover:bg-blue-600 bg-blue-400  text-white text-xl p-2 rounded-md' to="/gpt">Ask GPT</Link> 
+                                          <Link className='hover:bg-blue-600 bg-blue-400  text-white text-xl p-2 rounded-md' to="/about">Logmeal</Link> 
+                                          <Link className=' hover:bg-blue-600 bg-blue-400  text-white text-xl p-2 rounded-md' to="/streak">Streak</Link>
+                                          <Link className=' hover:bg-blue-600 bg-blue-400  text-white text-xl p-2 rounded-md' to="/leadership">Leadership</Link>  
+                                      </div> 
 
-                    <UserButton />
+                                        <UserButton />
+                            </div>
+                          <div className="text-center w-[580px] mx-auto font-bold mt-32 text-green-600 text-2xl">
+                              <h2>Welcome🎉</h2>
+                              <p>You are signed in — this is Rebuild a smart weight loss application.</p>
+                          </div>
+                   
+                      </div>
                   </SignedIn>
-    </div>
+
           
           
+                      
 
           </div> 
           <div>
