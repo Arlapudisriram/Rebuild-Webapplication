@@ -1,7 +1,7 @@
  import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-react';
-import logo from './assets/logo.svg';
+
 import build from './assets/build.svg';
 import Intro from './Components/Intro';
 import diet from './Components/diet.svg';

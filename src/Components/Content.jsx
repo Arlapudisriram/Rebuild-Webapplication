@@ -5,7 +5,7 @@ function Content() {
     function askChatgpt(){
         let msg=userInput.current.value;
         let apiUrl='https://api.openai.com/v1/chat/completions';
-        let apiKey=process.env.OPENAI_API_KEY;
+        let apiKey='process.env.OPENAI_API_KEY';
         const headers ={
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${apiKey}`,
